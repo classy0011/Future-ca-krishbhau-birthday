@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#081326">
+<title>For Krish Desai 💙</title>
+<style>
+:root{--blue:#75d5ff;--ice:#dff7ff;--gold:#f8d58b;--bg:#07101f}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:22px;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#f5f8ff;
+background:radial-gradient(ellipse at 50% 0%,#193c68 0%,#0b1930 42%,#050913 100%);
+overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;
+background-image:radial-gradient(#a6e8ff 1px,transparent 1px);background-size:27px 27px}
+.card{width:min(100%,440px);position:relative;text-align:center;padding:28px 22px 24px;
+border:1px solid #8bdcff44;border-radius:28px;background:linear-gradient(145deg,#14253ddd,#08101feF);
+box-shadow:0 25px 90px #0008,inset 0 1px #ffffff15;backdrop-filter:blur(12px)}
+.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--blue)}
+h1{font-size:clamp(26px,7vw,37px);line-height:1.15;margin:13px 0 8px}
+.sub{color:#b9cce2;line-height:1.6;font-size:14px}
+#giftBtn{display:block;margin:28px auto 16px;border:0;background:transparent;color:inherit;
+cursor:pointer;padding:10px;touch-action:manipulation}
+.gift{position:relative;width:156px;height:144px;margin:auto;filter:drop-shadow(0 15px 22px #0008);
+animation:bob 2.2s ease-in-out infinite}
+.giftbox{position:absolute;bottom:0;left:12px;width:132px;height:83px;border-radius:5px 5px 12px 12px;
+background:linear-gradient(110deg,#0873b9,#21b4e7 48%,#07538f);border:1px solid #8ce5ff}
+.giftbox:before{content:"";position:absolute;left:49px;top:0;width:31px;height:100%;
+background:linear-gradient(90deg,#c4f5ff,#f7fdff,#6acfff)}
+.lid{position:absolute;left:3px;top:38px;width:150px;height:29px;border-radius:7px;
+background:linear-gradient(100deg,#07538f,#39c7f4,#0b73b9);border:1px solid #a3eeff;
+transform-origin:12px 24px;transition:transform .8s cubic-bezier(.2,.8,.2,1);z-index:3}
+.bow{position:absolute;left:62px;top:15px;width:34px;height:25px;z-index:4}
+.bow:before,.bow:after{content:"";position:absolute;width:21px;height:17px;border:5px solid var(--gold);
+border-radius:70% 70% 15% 70%}
+.bow:before{left:-9px;transform:rotate(25deg)}.bow:after{left:12px;transform:scaleX(-1) rotate(25deg)}
+.giftbox:after{content:"";position:absolute;left:60px;top:33px;width:12px;height:12px;border-radius:50%;
+background:#eafaff;box-shadow:0 0 16px #eafaff}
+#giftBtn:focus-visible{outline:2px solid var(--gold);border-radius:15px}
+#giftBtn.open .lid{transform:translate(-5px,-42px) rotate(-28deg)}
+#giftBtn.open .gift{animation:none}
+.hint{font-size:12px;letter-spacing:1.5px;color:var(--gold)}
+#reveal{display:none}
+#reveal.show{display:block;animation:rise .7s ease both}
+.air{font-size:clamp(28px,8vw,39px);font-weight:950;letter-spacing:.5px;color:var(--ice);
+text-shadow:0 0 24px #45caff75;margin:15px 0 12px}
+.track{height:12px;border:1px solid #69d6ff66;background:#06101e;border-radius:20px;overflow:hidden}
+#bar{width:0;height:100%;border-radius:20px;background:linear-gradient(90deg,#1689d2,#a6f0ff,#f8d58b);
+box-shadow:0 0 18px #72dfff;transition:width .11s linear}
+#pct{font-size:12px;color:var(--blue);margin-top:8px}
+.motto{font-size:12px;letter-spacing:2px;color:var(--gold);margin:15px 0}
+#final{display:none;padding-top:8px}
+#final .name{font-size:clamp(23px,6vw,30px);font-weight:850;line-height:1.25;color:#fff}
+#final .birthday{font-size:clamp(24px,7vw,34px);font-weight:950;line-height:1.2;
+background:linear-gradient(90deg,#dff7ff,#62caff,#f8d58b);-webkit-background-clip:text;background-clip:text;color:transparent}
+#final p{color:#d0dfef;line-height:1.65;font-size:14px}
+#replay{margin-top:10px;background:#102c48;border:1px solid #6edbff77;color:#eafaff;
+border-radius:999px;padding:11px 18px;font-size:13px;cursor:pointer}
+.footer{font-size:10px;letter-spacing:2px;color:#829bb7;margin-top:25px}
+.spark{position:fixed;top:-25px;z-index:9;pointer-events:none;animation:fall 3.5s linear forwards}
+@keyframes bob{50%{transform:translateY(-7px)}}@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.8}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="eyebrow">✦ A little surprise for someone special ✦</div>
+  <h1 id="heading">Krish, something is waiting for you…</h1>
+  <p class="sub" id="intro">A small box. A big dream. One very special birthday surprise. 💙</p>
+  <button id="giftBtn" aria-label="Tap to open the gift">
+    <div class="gift"><div class="lid"></div><div class="bow"></div><div class="giftbox"></div></div>
+  </button>
+  <div class="hint" id="hint">T A P&nbsp; T O&nbsp; U N L O C K&nbsp; 🎁</div>
+  <section id="reveal" aria-live="polite">
+    <div class="eyebrow">THE NEXT BIG MISSION</div>
+    <div class="air">AIR 1 LOADING…</div>
+    <div class="track"><div id="bar"></div></div>
+    <div id="pct">0%</div>
+    <div class="motto" id="motto">DREAM BIG · STAY HUMBLE · KEEP GOING</div>
+    <div id="final">
+      <div style="font-size:32px;margin:12px">✨ 💙 ✨</div>
+      <div class="name">Future CA<br>Krish Desai</div>
+      <div class="birthday" style="margin-top:12px">HAPPY BIRTHDAY,<br>BROTHER! 💙</div>
+      <p>May your hard work turn into success,<br>your dreams into reality,<br>and your journey into a story worth telling.</p>
+      <p>Keep shining, keep growing, and make your future proud. 🥂</p>
+      <button id="replay">↻ Replay the surprise</button>
+    </div>
+  </section>
+  <div class="footer">MADE WITH BROTHERHOOD 💙</div>
+</main>
+<script>
+const gift=document.getElementById('giftBtn'),reveal=document.getElementById('reveal');
+const bar=document.getElementById('bar'),pct=document.getElementById('pct');
+const final=document.getElementById('final'),hint=document.getElementById('hint');
+const heading=document.getElementById('heading'),intro=document.getElementById('intro');
+let timer;
+function confetti(){const colors=['#75d5ff','#f8d58b','#ffffff','#52b9ff','#c3f4ff'];
+for(let i=0;i<65;i++){const s=document.createElement('span');s.className='spark';
+s.textContent=['✦','✧','•','💙','★'][i%5];s.style.left=Math.random()*100+'vw';
+s.style.color=colors[i%colors.length];s.style.fontSize=(12+Math.random()*15)+'px';
+s.style.animationDelay=(Math.random()*.9)+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),4500)}}
+function start(){clearInterval(timer);gift.classList.add('open');gift.disabled=true;
+hint.style.display='none';heading.textContent='SURPRISE UNLOCKED ✨';intro.style.display='none';
+reveal.classList.add('show');final.style.display='none';bar.style.width='0%';pct.textContent='0%';
+let n=0;timer=setInterval(()=>{n=Math.min(100,n+2);bar.style.width=n+'%';pct.textContent=n+'%';
+if(n>=100){clearInterval(timer);final.style.display='block';confetti();gift.disabled=false}},70)}
+function reset(){clearInterval(timer);gift.classList.remove('open');gift.disabled=false;
+reveal.classList.remove('show');heading.textContent='Krish, something is waiting for you…';
+intro.style.display='block';hint.style.display='block';bar.style.width='0%';pct.textContent='0%';}
+gift.addEventListener('click',start);document.getElementById('replay').addEventListener('click',reset);
+</script>
+</body>
+</html>
